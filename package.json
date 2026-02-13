@@ -1,27 +1,15 @@
 {
-  "name": "www-jeffripke-com",
+  "name": "group-chat",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jripke74/www-jeffripke-com.git"
-  },
-  "keywords": [],
-  "author": "",
+  "author": "DEV",
   "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/jripke74/www-jeffripke-com/issues"
-  },
-  "homepage": "https://github.com/jripke74/www-jeffripke-com#readme",
   "dependencies": {
-    "body-parser": "^2.2.2",
-    "dotenv": "^17.3.1",
-    "express": "^5.2.1",
-    "pg": "^8.18.0"
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2"
   }
 }
