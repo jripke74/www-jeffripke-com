@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require("express");
 const { Pool } = require("pg");
 const path = require("path");
@@ -12,11 +14,11 @@ app.use(express.static(path.join(__dirname))); // server static files (like inde
 
 // PostgreSQl connection pool configuration
 const pool = new Pool({
-  user: 'your_user',         // e.g., postres
+  user: process.env.DB_USERNAME,         // e.g., postres
   host: 'localhost',
-  database: 'userdb',        // e.g., userdb
-  password: 'your_password', // your postgres password
-  port: 5432,                // default postres port
+  database: process.env.DB_NAME,        // e.g., userdb
+  password: process.env.DB_PASSWORD, // your postgres password
+  port: process.env.DB_PORT,                // default postres port
 });
 
 // Test database connection on start up
