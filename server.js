@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname))); // server static files (like inde
 // PostgreSQl connection pool configuration
 const pool = new Pool({
   user: process.env.DB_USERNAME,         // e.g., postres
-  host: 'localhost',
+  host: process.env.DB_HOST,
   database: process.env.DB_NAME,        // e.g., userdb
   password: process.env.DB_PASSWORD, // your postgres password
   port: process.env.DB_PORT,                // default postres port
