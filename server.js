@@ -35,11 +35,11 @@ app.get('/', (req, res) => {
 app.post('/submit-form', async (req, res) => {
   const { title, releaseyear } = req.body;
   try {
-    const query = 'CREATE TABLE movies(id SERIAL PRIMARY KEY, title VARCHAR(100) NOT NULL, releaseyear INTEGER NOT NULL';
-    // const query = 'INSERT INTO movies(title, releaseyear) VALUES($1, $2) RETURNING *';
+    // const query = 'CREATE TABLE movies(id SERIAL PRIMARY KEY, title VARCHAR(100) NOT NULL, releaseyear INTEGER NOT NULL';
+    const query = 'INSERT INTO movies(title, releaseyear) VALUES($1, $2) RETURNING *';
     const values = [ title, releaseyear ];
-    // const result = await pool.query(query, values);
-    const result = await pool.query(query);
+    const result = await pool.query(query, values);
+    // const result = await pool.query(query);
     console.log('Data inserted:', result.rows[0]);
     res.status(200).send('Data submitted successfully!');
   } catch (err) {
