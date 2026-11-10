@@ -50,7 +50,7 @@ export default function Contact() {
         <h1>Contact</h1>
         <p className="lede prose">
           Send a note about a project or Ripke Media. It is emailed to me
-          and saved here. This form is not support for an iOS app.
+          and saved here.
         </p>
       </header>
 
