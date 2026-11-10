@@ -1,4 +1,4 @@
-const SEED_VERSION = 6;
+const SEED_VERSION = 7;
 
 const profile = {
   id: 1,
@@ -49,6 +49,7 @@ const projects = [
     body: [
       "Ripke Media is the media center I have been building for a home library. Shelves, search, and title pages work as normal web pages. Accounts, favorites, watch history, and continue-watching are stored per person.",
       "Playback runs in the page, with captions, chapter lists, and disc images. The layout is mobile-first and uses a hamburger menu on smaller screens. The application is Node.js, Express, and PostgreSQL, and it is set up to run on Heroku.",
+      "Sign-in is an email address and password, followed by a one-time code sent to that inbox. Passwords and codes are stored as hashes. Sign in with Apple is built in and is used when the Apple credentials are configured. A reset link can be emailed, and each login is a server session that can be signed out from other devices.",
       "The public site is www.ripkemedia.com. Library files stay on my home storage. This portfolio only points to that work.",
     ].join("\n\n"),
     status: "In progress",
