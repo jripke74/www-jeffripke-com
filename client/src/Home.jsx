@@ -17,18 +17,27 @@ export default function Home() {
 
   return (
     <>
-      <section className="hero">
-        <p className="eyebrow">{profile.location}</p>
-        <h1>{profile.fullName}</h1>
-        <p className="lede">{profile.headline}</p>
-        <p className="prose">{profile.summary}</p>
-        <div className="button-row">
-          <Link className="button primary" to="/projects">
-            Projects
-          </Link>
-          <ExternalLink className="button secondary" href={profile.mediaUrl}>
-            Ripke Media
-          </ExternalLink>
+      <section className="hero hero-layout">
+        <img
+          className="portrait"
+          src="/jeff-ripke.jpg"
+          width="512"
+          height="551"
+          alt="Portrait of Jeff Ripke"
+        />
+        <div className="hero-copy">
+          <p className="eyebrow">{profile.location}</p>
+          <h1>{profile.fullName}</h1>
+          <p className="lede">{profile.headline}</p>
+          <p className="prose">{profile.summary}</p>
+          <div className="button-row">
+            <Link className="button primary" to="/projects">
+              Projects
+            </Link>
+            <ExternalLink className="button secondary" href={profile.mediaUrl}>
+              Ripke Media
+            </ExternalLink>
+          </div>
         </div>
       </section>
 

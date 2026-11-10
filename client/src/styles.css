@@ -246,6 +246,20 @@ a:hover {
   padding-bottom: 0.5rem;
 }
 
+.hero-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.portrait {
+  width: 11rem;
+  height: auto;
+  border-radius: 0.5rem;
+  border: 1px solid var(--line);
+  object-fit: cover;
+}
+
 .eyebrow {
   margin: 0 0 0.4rem;
   font-size: 0.85rem;
@@ -439,6 +453,22 @@ button.primary:disabled {
 }
 
 @media (min-width: 40rem) {
+  .hero-layout {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .portrait {
+    width: 14rem;
+    order: 1;
+  }
+
+  .hero-copy {
+    flex: 0 1 40rem;
+    min-width: 0;
+  }
+
   h1 {
     font-size: 3.2rem;
   }
