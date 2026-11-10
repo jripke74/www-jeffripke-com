@@ -1,4 +1,4 @@
-const SEED_VERSION = 2;
+const SEED_VERSION = 3;
 
 const profile = {
   id: 1,
@@ -11,34 +11,6 @@ const profile = {
   githubUrl: "https://github.com/jripke74",
   mediaUrl: "https://www.ripkemedia.com",
 };
-
-const experiences = [
-  {
-    id: 1,
-    role: "Full-stack web developer",
-    organization: "Independent projects",
-    location: "Spokane, Washington",
-    dates: "2015 – Present",
-    bullets: [
-      "Build web applications with React, Node.js, Express, and PostgreSQL.",
-      "Ship Ripke Media, a home media center, and this portfolio on Heroku.",
-      "Keep learning through freeCodeCamp, Udacity, and MongoDB University.",
-    ],
-    sortOrder: 1,
-  },
-  {
-    id: 2,
-    role: "iOS developer",
-    organization: "Independent projects",
-    location: null,
-    dates: "2015 – Present",
-    bullets: [
-      "Build Map Your Travels in SwiftUI.",
-      "The app records a drive, names streets, detects turns, and replays the route.",
-    ],
-    sortOrder: 2,
-  },
-];
 
 const credentials = [
   {
@@ -109,7 +81,7 @@ const projects = [
     summary:
       "This portfolio. React on the front, Node.js and PostgreSQL behind it, hosted on Heroku.",
     body: [
-      "www.jeffripke.com and www.ripkeenterprises.com both serve this site. The pages are a React application. Express reads my work history and projects from PostgreSQL and accepts notes through the contact form.",
+      "www.jeffripke.com and www.ripkeenterprises.com both serve this site. The pages are a React application. Express reads the projects from PostgreSQL and accepts notes through the contact form.",
       "The layout starts from a phone screen. On a small screen the sections sit in a hamburger menu. On a wider screen the same links stay in the header. Text, contrast, focus, labels, and keyboard use follow the Web Content Accessibility Guidelines.",
       "An earlier version of this repository was a single Express page with a short reading project and a media form. This version replaces that page with the portfolio.",
     ].join("\n\n"),
@@ -145,7 +117,6 @@ const interests = [
 module.exports = {
   SEED_VERSION,
   profile,
-  experiences,
   credentials,
   projects,
   interests,

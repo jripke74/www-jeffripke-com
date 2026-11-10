@@ -2,7 +2,6 @@ const nodemailer = require("nodemailer");
 
 const TOPIC_LABELS = {
   general: "General",
-  work: "Work history",
   media: "Ripke Media",
   other: "Something else",
 };

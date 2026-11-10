@@ -57,34 +57,16 @@ app.get("/api/profile", async (req, res, next) => {
   try {
     const profile = await pool.query("SELECT * FROM profile WHERE id = 1");
     const interests = await pool.query("SELECT title, detail FROM interests ORDER BY sort_order");
+    const credentials = await pool.query(
+      "SELECT title, provider, dates, detail FROM credentials ORDER BY sort_order"
+    );
     if (!profile.rows[0]) {
       res.status(404).json({ error: "Profile is not available yet." });
       return;
     }
-    res.json({ profile: mapProfile(profile.rows[0]), interests: interests.rows });
-  } catch (error) {
-    next(error);
-  }
-});
-
-app.get("/api/experience", async (req, res, next) => {
-  try {
-    const experiences = await pool.query(
-      `SELECT role, organization, location, dates, bullets
-       FROM experiences ORDER BY sort_order`
-    );
-    const credentials = await pool.query(
-      `SELECT title, provider, dates, detail
-       FROM credentials ORDER BY sort_order`
-    );
     res.json({
-      experiences: experiences.rows.map((row) => ({
-        role: row.role,
-        organization: row.organization,
-        location: row.location,
-        dates: row.dates,
-        bullets: row.bullets,
-      })),
+      profile: mapProfile(profile.rows[0]),
+      interests: interests.rows,
       credentials: credentials.rows,
     });
   } catch (error) {
@@ -127,7 +109,7 @@ app.get("/api/projects/:slug", async (req, res, next) => {
   }
 });
 
-const TOPICS = new Set(["general", "work", "media", "other"]);
+const TOPICS = new Set(["general", "media", "other"]);
 
 app.post("/api/contact", contactLimiter, async (req, res, next) => {
   try {

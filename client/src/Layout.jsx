@@ -4,7 +4,6 @@ import { ExternalLink } from "./ui.jsx";
 
 const LINKS = [
   { to: "/", label: "Home", end: true },
-  { to: "/work", label: "Work" },
   { to: "/projects", label: "Projects" },
   { to: "/contact", label: "Contact" },
 ];

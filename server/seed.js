@@ -100,15 +100,6 @@ async function ensureSeed(pool) {
       ]
     );
 
-    for (const item of data.experiences) {
-      await client.query(
-        `INSERT INTO experiences
-          (id, role, organization, location, dates, bullets, sort_order)
-         VALUES ($1, $2, $3, $4, $5, $6, $7)`,
-        [item.id, item.role, item.organization, item.location, item.dates, item.bullets, item.sortOrder]
-      );
-    }
-
     for (const item of data.credentials) {
       await client.query(
         `INSERT INTO credentials

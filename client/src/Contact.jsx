@@ -3,7 +3,6 @@ import { useDocumentTitle, useFocusHeading } from "./ui.jsx";
 
 const TOPICS = [
   { value: "general", label: "General" },
-  { value: "work", label: "Work history" },
   { value: "media", label: "Ripke Media" },
   { value: "other", label: "Something else" },
 ];
@@ -50,7 +49,7 @@ export default function Contact() {
         <p className="eyebrow">Spokane, Washington</p>
         <h1>Contact</h1>
         <p className="lede prose">
-          Send a note about work, a project, or Ripke Media. It is emailed to me
+          Send a note about a project or Ripke Media. It is emailed to me
           and saved here. This form is not support for an iOS app.
         </p>
       </header>
