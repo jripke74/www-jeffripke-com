@@ -1,9 +1,9 @@
-const SEED_VERSION = 3;
+const SEED_VERSION = 4;
 
 const profile = {
   id: 1,
   fullName: "Jeff Ripke",
-  location: "Spokane, Washington",
+  location: "Coeur d'Alene, Idaho",
   headline: "Full-stack web developer.",
   summary:
     "I build web applications and iOS apps. This site is the record of that software work. Ripke Media, my media center, lives at ripkemedia.com.",

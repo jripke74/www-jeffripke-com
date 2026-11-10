@@ -46,7 +46,7 @@ export default function Contact() {
   return (
     <>
       <header className="hero">
-        <p className="eyebrow">Spokane, Washington</p>
+        <p className="eyebrow">Coeur d&apos;Alene, Idaho</p>
         <h1>Contact</h1>
         <p className="lede prose">
           Send a note about a project or Ripke Media. It is emailed to me
