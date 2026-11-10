@@ -4,6 +4,7 @@ import Home from "./Home.jsx";
 import Projects from "./Projects.jsx";
 import ProjectDetail from "./ProjectDetail.jsx";
 import Contact from "./Contact.jsx";
+import MapYourTravelsPrivacy from "./MapYourTravelsPrivacy.jsx";
 import { useDocumentTitle, useFocusHeading } from "./ui.jsx";
 
 export default function App() {
@@ -13,6 +14,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/:slug" element={<ProjectDetail />} />
+        <Route path="/map-your-travels/privacy" element={<MapYourTravelsPrivacy />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<Missing />} />
       </Routes>

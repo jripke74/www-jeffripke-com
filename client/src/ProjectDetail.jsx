@@ -53,6 +53,11 @@ export default function ProjectDetail() {
           <p key={paragraph}>{paragraph}</p>
         ))}
       </div>
+      {project.slug === "map-your-travels" ? (
+        <p>
+          <Link to="/map-your-travels/privacy">Privacy policy</Link>
+        </p>
+      ) : null}
       <div className="button-row">
         {project.linkUrl && project.linkLabel ? (
           <ExternalLink className="button primary" href={project.linkUrl}>
