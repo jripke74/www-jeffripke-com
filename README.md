@@ -136,4 +136,16 @@ heroku pg:psql -a jeffripke-www -c "SELECT name, email, topic, left(body, 80) FR
 
 Career, projects, training, and interests live in `server/seed-data.js`. Raise `SEED_VERSION` by 1 when you change them. The next boot reloads that content. Rows in `messages` are kept.
 
-Contact notes are only in the database. Nothing emails them to you yet.
+Contact notes are stored in `messages` and emailed to `jeff@jeffripke.com`. Reply-To is the address the visitor typed. Mail uses the same SMTP settings as Ripke Media. Set them on Heroku before the form can send:
+
+```bash
+heroku config:set -a jeffripke-www \
+  SMTP_HOST=smtp.sendgrid.net \
+  SMTP_PORT=587 \
+  SMTP_USER=apikey \
+  SMTP_PASS=your-sendgrid-key \
+  SMTP_FROM="Jeff Ripke <jeff@jeffripke.com>" \
+  CONTACT_TO=jeff@jeffripke.com
+```
+
+Use the SendGrid API key already used by the media center. Do not commit it. Without those variables, production saves the note and tells the visitor the email could not be sent. Locally, with no SMTP settings, the note is printed in the server terminal instead.

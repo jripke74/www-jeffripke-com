@@ -6,6 +6,7 @@ const helmet = require("helmet");
 const rateLimit = require("express-rate-limit");
 const { createPool } = require("./db");
 const { ensureSeed, mapProfile, mapProject } = require("./seed");
+const { sendContactNote } = require("./mail");
 
 const app = express();
 const pool = createPool();
@@ -158,6 +159,15 @@ app.post("/api/contact", contactLimiter, async (req, res, next) => {
       "INSERT INTO messages (name, email, topic, body) VALUES ($1, $2, $3, $4)",
       [name, email, topic, body]
     );
+    try {
+      await sendContactNote({ name, email, topic, body });
+    } catch (error) {
+      console.error(error);
+      res.status(502).json({
+        error: "Your note was saved, but it could not be emailed. Please try again later.",
+      });
+      return;
+    }
     res.status(201).json({ ok: true });
   } catch (error) {
     next(error);

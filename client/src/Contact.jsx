@@ -50,14 +50,14 @@ export default function Contact() {
         <p className="eyebrow">Spokane, Washington</p>
         <h1>Contact</h1>
         <p className="lede prose">
-          Send a note about work, a project, or Ripke Media. Messages are saved
-          so I can read them. This form is not support for an iOS app.
+          Send a note about work, a project, or Ripke Media. It is emailed to me
+          and saved here. This form is not support for an iOS app.
         </p>
       </header>
 
       {status === "sent" ? (
         <p className="banner" role="status">
-          Thanks. Your note is saved.
+          Thanks. Your note was sent.
         </p>
       ) : null}
 
