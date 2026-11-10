@@ -1,13 +1,12 @@
-const SEED_VERSION = 1;
+const SEED_VERSION = 2;
 
 const profile = {
   id: 1,
   fullName: "Jeff Ripke",
   location: "Spokane, Washington",
-  headline:
-    "Full-stack web developer, wireless switch technician, and certified RV inspector.",
+  headline: "Full-stack web developer.",
   summary:
-    "I work full-time at AT&T keeping a mobility switching office running, and I build web software on my own time. I am a certified RV inspector and technician, a former Navy cryptologic technician, and a lifelong learner. This site is the record of that work. Ripke Media, my media center, lives at ripkemedia.com.",
+    "I build web applications and iOS apps. This site is the record of that software work. Ripke Media, my media center, lives at ripkemedia.com.",
   linkedinUrl: "https://www.linkedin.com/in/jeffripke/",
   githubUrl: "https://github.com/jripke74",
   mediaUrl: "https://www.ripkemedia.com",
@@ -16,77 +15,55 @@ const profile = {
 const experiences = [
   {
     id: 1,
-    role: "Switch Technician",
-    organization: "AT&T Mobility",
+    role: "Full-stack web developer",
+    organization: "Independent projects",
     location: "Spokane, Washington",
-    dates: "May 2006 – Present",
+    dates: "2015 – Present",
     bullets: [
-      "Maintain the day-to-day operation of an AT&T mobility telephone switching office.",
-      "Service generators, HVAC, fiber, batteries, and the building systems around the switch.",
-      "Replace router cards, troubleshoot routers, clean and troubleshoot fiber, and keep spares on hand.",
-      "Back up computer, switch, and network equipment, and look after site security.",
+      "Build web applications with React, Node.js, Express, and PostgreSQL.",
+      "Ship Ripke Media, a home media center, and this portfolio on Heroku.",
+      "Keep learning through freeCodeCamp, Udacity, and MongoDB University.",
     ],
     sortOrder: 1,
   },
   {
     id: 2,
-    role: "Cryptologic Technician",
-    organization: "United States Navy",
-    location: "England, United Kingdom",
-    dates: "May 1996 – August 2005",
+    role: "iOS developer",
+    organization: "Independent projects",
+    location: null,
+    dates: "2015 – Present",
     bullets: [
-      "Worked with electrical engineers on communication systems.",
-      "Managed a four-person team during military operations in the Persian Gulf.",
+      "Build Map Your Travels in SwiftUI.",
+      "The app records a drive, names streets, detects turns, and replays the route.",
     ],
     sortOrder: 2,
-  },
-  {
-    id: 3,
-    role: "RV service training",
-    organization: "Mobile RV Academy",
-    location: null,
-    dates: "2019",
-    bullets: [
-      "Completed Recreation Vehicle Service Technician training, 35 contact hours.",
-      "Covered DC and AC electrical systems, propane, water systems, water heaters, air conditioning, furnaces, refrigerators, and exterior systems.",
-      "I inspect and repair RVs, and I plan to keep doing that work while traveling.",
-    ],
-    sortOrder: 3,
   },
 ];
 
 const credentials = [
   {
     id: 1,
-    title: "CompTIA Tech",
-    provider: "CompTIA",
-    dates: "2025",
-    detail: "Certification listed on my LinkedIn profile.",
-    sortOrder: 1,
-  },
-  {
-    id: 2,
     title: "Full Stack Web Development Certification",
     provider: "freeCodeCamp",
     dates: "2016 – 2017",
     detail: "Front-end and back-end web development coursework.",
-    sortOrder: 2,
+    sortOrder: 1,
   },
   {
-    id: 3,
+    id: 2,
     title: "Programming nanodegrees",
     provider: "Udacity",
     dates: "2015 – 2019",
     detail: "Includes Beginning iOS App Development in 2015–2016.",
-    sortOrder: 3,
+    sortOrder: 2,
   },
   {
-    id: 4,
+    id: 3,
     title: "M001: MongoDB Basics",
     provider: "MongoDB University",
     dates: null,
     detail: "Database coursework listed on my LinkedIn profile.",
-    sortOrder: 4,
+    sortOrder: 3,
   },
 ];
 
@@ -154,20 +131,14 @@ const interests = [
   {
     id: 2,
     title: "Maps and travel",
-    detail: "Planning routes, keeping track of drives, and getting ready to travel by RV.",
+    detail: "Planning routes and keeping track of drives.",
     sortOrder: 2,
   },
   {
     id: 3,
-    title: "RV systems",
-    detail: "Electrical, propane, water, heat, and the rest of the systems that keep a coach working.",
-    sortOrder: 3,
-  },
-  {
-    id: 4,
     title: "Hiking, photography, and coins",
     detail: "Time outside, pictures from those trips, and a coin collection.",
-    sortOrder: 4,
+    sortOrder: 3,
   },
 ];
 

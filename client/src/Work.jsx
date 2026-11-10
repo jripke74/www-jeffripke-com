@@ -20,8 +20,8 @@ export default function Work() {
         <p className="eyebrow">Work and training</p>
         <h1>What I do</h1>
         <p className="lede prose">
-          Telecommunications has been the day job for a long time. Software and RV
-          systems are the work I keep adding to it.
+          I build web applications and iOS apps, and this site is where I keep
+          that work.
         </p>
       </header>
 

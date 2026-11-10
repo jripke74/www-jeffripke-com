@@ -2,7 +2,7 @@
 
 Portfolio for Jeff Ripke. React, Node.js, and PostgreSQL. One Heroku app serves both www.jeffripke.com and www.ripkeenterprises.com.
 
-The pages explain the work: AT&T, the Navy, RV training, and the software projects, including a link to [Ripke Media](https://www.ripkemedia.com). This site does not host Apple iOS app support pages.
+The pages explain the software I build, including a link to [Ripke Media](https://www.ripkemedia.com). This site does not host Apple iOS app support pages.
 
 ## Run it locally
 
@@ -95,27 +95,29 @@ heroku domains -a jeffripke-www
 
 Write down the DNS target Heroku prints for each name. It looks like `something.herokudns.com`. Each host can have its own target. Use the target from that command, not a guess.
 
-### 5. Point Namecheap at Heroku
+### 5. Point the domains at Heroku
 
-Do this once for `jeffripke.com` and again for `ripkeenterprises.com`.
+The Heroku app is already live at `https://jeffripke-www-87fe1d236350.herokuapp.com`. Custom-domain certificates stay **Failing** until DNS uses the targets below. A Namecheap URL redirect does not count. Delete URL Redirect records and old `A` records for `@` and `www` before adding these.
 
-1. Sign in at Namecheap.
-2. Domain List → Manage next to the domain.
-3. Advanced DNS.
-4. Remove parking records, URL redirects, and any old `A` or `CNAME` records for `@` and `www` that would conflict.
-5. Add a `CNAME` record:
-   - Host: `www`
-   - Value: the DNS target Heroku showed for `www` on that domain
-   - TTL: Automatic
-6. Add the root host. Namecheap calls this `@`.
-   - If Advanced DNS offers an `ALIAS` record, set Host `@` to the DNS target Heroku showed for the bare domain.
-   - If there is no `ALIAS` record, add a URL redirect from `@` to `https://www.` plus that domain, permanent (301).
+`jeffripke.com` uses Namecheap DNS. Domain List → Manage → Advanced DNS:
 
-Save. DNS can take from a few minutes to a day. Heroku issues the HTTPS certificate after the DNS points at the app. `heroku certs:auto -a jeffripke-www` shows the certificate status.
+| Host | Type | Value |
+| --- | --- | --- |
+| `www` | CNAME | `philosophical-dreadnoughtus-2pcqxrm7qg9nmxzokvl526sb.herokudns.com` |
+| `@` | ALIAS | `elementary-bat-ig6chw7su1nmklxwrce6ezt3.herokudns.com` |
+
+`ripkeenterprises.com` is not using Namecheap’s DNS. Its nameservers are `dns1.supremedns.com` through `dns4.supremedns.com`, and the address `162.210.102.89` is old hosting. In Namecheap, open the domain → Nameservers → Namecheap BasicDNS. After that switch finishes, open Advanced DNS and add:
+
+| Host | Type | Value |
+| --- | --- | --- |
+| `www` | CNAME | `objective-pigweed-spvhhejsz50m6da72084n7dx.herokudns.com` |
+| `@` | ALIAS | `globular-duck-4xkasofeurk65pf55vhvyuz4.herokudns.com` |
+
+TTL can stay Automatic. DNS can take from a few minutes to a day.
 
 ### 6. Confirm both sites
 
-Open each of these only after the certificate says issued:
+`heroku certs:auto -a jeffripke-www` lists each domain. **Failing** means the records above are not in place yet. When every row says `Cert issued`, open:
 
 - https://www.jeffripke.com
 - https://jeffripke.com
