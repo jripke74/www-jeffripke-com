@@ -83,7 +83,11 @@ app.get("/api/projects", async (req, res, next) => {
     res.json({
       projects: result.rows.map((row) => {
         const images = Array.isArray(row.images) ? row.images : [];
-        const first = images[0];
+        const cover =
+          images.find((image) => image.caption === "Music") ||
+          images.find((image) => !image.phone) ||
+          images[0] ||
+          null;
         return {
           slug: row.slug,
           title: row.title,
@@ -92,7 +96,8 @@ app.get("/api/projects", async (req, res, next) => {
           stack: row.stack,
           linkUrl: row.link_url,
           linkLabel: row.link_label,
-          cover: first ? first.src : null,
+          cover: cover ? cover.src : null,
+          coverPhone: Boolean(cover && cover.phone),
         };
       }),
     });
