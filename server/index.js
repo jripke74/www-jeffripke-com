@@ -77,19 +77,24 @@ app.get("/api/profile", async (req, res, next) => {
 app.get("/api/projects", async (req, res, next) => {
   try {
     const result = await pool.query(
-      `SELECT slug, title, summary, status, stack, link_url, link_label
+      `SELECT slug, title, summary, status, stack, link_url, link_label, images
        FROM projects ORDER BY sort_order`
     );
     res.json({
-      projects: result.rows.map((row) => ({
-        slug: row.slug,
-        title: row.title,
-        summary: row.summary,
-        status: row.status,
-        stack: row.stack,
-        linkUrl: row.link_url,
-        linkLabel: row.link_label,
-      })),
+      projects: result.rows.map((row) => {
+        const images = Array.isArray(row.images) ? row.images : [];
+        const first = images[0];
+        return {
+          slug: row.slug,
+          title: row.title,
+          summary: row.summary,
+          status: row.status,
+          stack: row.stack,
+          linkUrl: row.link_url,
+          linkLabel: row.link_label,
+          cover: first ? first.src : null,
+        };
+      }),
     });
   } catch (error) {
     next(error);
