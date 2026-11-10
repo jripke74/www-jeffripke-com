@@ -57,6 +57,7 @@ export default function Layout({ children }) {
         <div className="header-inner">
           <div className="header-bar">
             <a className="brand" href="/">
+              <img className="brand-mark" src="/logo.png" alt="" width="44" height="52" />
               Jeff Ripke
             </a>
             <button

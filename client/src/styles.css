@@ -143,6 +143,13 @@ a:hover {
   min-height: 2.75rem;
   display: inline-flex;
   align-items: center;
+  gap: 0.45rem;
+}
+
+.brand-mark {
+  width: 2.35rem;
+  height: auto;
+  flex: none;
 }
 
 .nav-toggle {
