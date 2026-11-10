@@ -1,4 +1,4 @@
-const SEED_VERSION = 5;
+const SEED_VERSION = 6;
 
 const profile = {
   id: 1,
@@ -67,7 +67,6 @@ const projects = [
     body: [
       "Map Your Travels is a SwiftUI app I am building for the trips I want to remember. It follows the phone’s location, names streets along the way, and marks turns.",
       "A finished drive can be replayed on a map. The app can email the trip and include a CSV of the route, and a trip file can be opened back into the app.",
-      "I describe the app here because it is work I am doing. Support pages for the App Store are not part of this website.",
     ].join("\n\n"),
     status: "In progress",
     stack: ["Swift", "SwiftUI", "iOS"],
