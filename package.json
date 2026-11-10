@@ -1,27 +1,26 @@
 {
   "name": "www-jeffripke-com",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Portfolio for Jeff Ripke. React, Node.js, and PostgreSQL on Heroku.",
+  "main": "server/index.js",
+  "engines": {
+    "node": "22.x || 24.x"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server/index.js",
+    "dev": "concurrently -k \"node --watch server/index.js\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client",
+    "heroku-postbuild": "npm install --prefix client --include=dev && npm run build --prefix client"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jripke74/www-jeffripke-com.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/jripke74/www-jeffripke-com/issues"
-  },
-  "homepage": "https://github.com/jripke74/www-jeffripke-com#readme",
   "dependencies": {
-    "body-parser": "^2.2.2",
-    "express": "^5.2.1",
-    "pg": "^8.18.0"
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.1",
+    "helmet": "^8.1.0",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
   }
 }
