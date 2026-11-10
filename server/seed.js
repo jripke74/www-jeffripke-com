@@ -49,6 +49,8 @@ CREATE TABLE IF NOT EXISTS projects (
   sort_order INTEGER NOT NULL
 );
 
+ALTER TABLE projects ADD COLUMN IF NOT EXISTS images JSONB NOT NULL DEFAULT '[]'::jsonb;
+
 CREATE TABLE IF NOT EXISTS interests (
   id INTEGER PRIMARY KEY,
   title TEXT NOT NULL,
@@ -112,8 +114,8 @@ async function ensureSeed(pool) {
     for (const item of data.projects) {
       await client.query(
         `INSERT INTO projects
-          (id, slug, title, summary, body, status, stack, link_url, link_label, sort_order)
-         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)`,
+          (id, slug, title, summary, body, status, stack, link_url, link_label, images, sort_order)
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10::jsonb, $11)`,
         [
           item.id,
           item.slug,
@@ -124,6 +126,7 @@ async function ensureSeed(pool) {
           item.stack,
           item.linkUrl,
           item.linkLabel,
+          JSON.stringify(item.images || []),
           item.sortOrder,
         ]
       );
@@ -172,6 +175,7 @@ function mapProject(row) {
     stack: row.stack,
     linkUrl: row.link_url,
     linkLabel: row.link_label,
+    images: row.images || [],
   };
 }
 

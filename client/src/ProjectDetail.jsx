@@ -36,6 +36,18 @@ export default function ProjectDetail() {
           <li key={item}>{item}</li>
         ))}
       </ul>
+      {project.images.length > 0 ? (
+        <ul className="shot-list">
+          {project.images.map((image) => (
+            <li key={image.src}>
+              <figure>
+                <img src={image.src} alt={image.alt} width={image.width} height={image.height} />
+                <figcaption>{image.caption}</figcaption>
+              </figure>
+            </li>
+          ))}
+        </ul>
+      ) : null}
       <div className="prose">
         {paragraphs.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>

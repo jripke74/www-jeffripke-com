@@ -1,4 +1,4 @@
-const SEED_VERSION = 4;
+const SEED_VERSION = 5;
 
 const profile = {
   id: 1,
@@ -55,6 +55,7 @@ const projects = [
     stack: ["Node.js", "Express", "PostgreSQL", "Heroku"],
     linkUrl: "https://www.ripkemedia.com",
     linkLabel: "Open Ripke Media",
+    images: [],
     sortOrder: 1,
   },
   {
@@ -72,6 +73,22 @@ const projects = [
     stack: ["Swift", "SwiftUI", "iOS"],
     linkUrl: null,
     linkLabel: null,
+    images: [
+      {
+        src: "/map-your-travels-record.png",
+        alt: "Map Your Travels record screen, watching for the next trip on a map with distance, time, and turns.",
+        caption: "Record screen",
+        width: 472,
+        height: 1024,
+      },
+      {
+        src: "/map-your-travels-trips.png",
+        alt: "Map Your Travels trips screen, listing saved routes with distance, time, and a button to mail each trip.",
+        caption: "Trips screen",
+        width: 472,
+        height: 1024,
+      },
+    ],
     sortOrder: 2,
   },
   {
@@ -89,6 +106,7 @@ const projects = [
     stack: ["React", "Node.js", "Express", "PostgreSQL", "Heroku"],
     linkUrl: null,
     linkLabel: null,
+    images: [],
     sortOrder: 3,
   },
 ];
