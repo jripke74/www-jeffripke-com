@@ -39,7 +39,7 @@ export default function ProjectDetail() {
       {project.images.length > 0 ? (
         <ul className="shot-list">
           {project.images.map((image) => (
-            <li key={image.src}>
+            <li key={image.src} className={image.phone ? "shot-phone" : undefined}>
               <figure>
                 <img src={image.src} alt={image.alt} width={image.width} height={image.height} />
                 <figcaption>{image.caption}</figcaption>

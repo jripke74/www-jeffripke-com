@@ -1,4 +1,4 @@
-const SEED_VERSION = 7;
+const SEED_VERSION = 8;
 
 const profile = {
   id: 1,
@@ -56,7 +56,44 @@ const projects = [
     stack: ["Node.js", "Express", "PostgreSQL", "Heroku"],
     linkUrl: "https://www.ripkemedia.com",
     linkLabel: "Open Ripke Media",
-    images: [],
+    images: [
+      {
+        src: "/ripke-media-sign-in.png",
+        alt: "Ripke Media sign-in page with Sign in with Apple, email, password, forgot password, and create an account.",
+        caption: "Sign in",
+        width: 1024,
+        height: 584,
+      },
+      {
+        src: "/ripke-media-search.png",
+        alt: "Ripke Media library search showing four AC/DC titles.",
+        caption: "Search",
+        width: 1024,
+        height: 602,
+      },
+      {
+        src: "/ripke-media-music.jpg",
+        alt: "Ripke Media music library, an album grid that can be sorted A to Z, by year, or by newest.",
+        caption: "Music",
+        width: 1024,
+        height: 666,
+      },
+      {
+        src: "/ripke-media-movie.jpg",
+        alt: "Ripke Media movie page with the poster, favorites, play disc, and a preview player.",
+        caption: "Movie",
+        width: 1024,
+        height: 1013,
+      },
+      {
+        src: "/ripke-media-phone.png",
+        alt: "Ripke Media search on a phone at ripkemedia.com.",
+        caption: "Search on a phone",
+        width: 472,
+        height: 1024,
+        phone: true,
+      },
+    ],
     sortOrder: 1,
   },
   {
@@ -80,6 +117,7 @@ const projects = [
         caption: "Record screen",
         width: 472,
         height: 1024,
+        phone: true,
       },
       {
         src: "/map-your-travels-trips.png",
@@ -87,6 +125,7 @@ const projects = [
         caption: "Trips screen",
         width: 472,
         height: 1024,
+        phone: true,
       },
     ],
     sortOrder: 2,

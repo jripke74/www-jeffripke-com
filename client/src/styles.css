@@ -366,10 +366,21 @@ a:hover {
 
 .shot-list {
   list-style: none;
-  display: grid;
-  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1.25rem;
   margin: 0 0 1.5rem;
   padding: 0;
+}
+
+.shot-list > li {
+  flex: 1 1 100%;
+  min-width: 0;
+}
+
+.shot-list > .shot-phone {
+  flex: 0 1 18rem;
 }
 
 .shot-list figure {
@@ -377,10 +388,10 @@ a:hover {
 }
 
 .shot-list img {
-  width: min(100%, 18rem);
+  width: 100%;
   height: auto;
   border: 1px solid var(--line);
-  border-radius: 1.25rem;
+  border-radius: 0.75rem;
   background: #111;
 }
 
@@ -478,10 +489,6 @@ button.primary:disabled {
 }
 
 @media (min-width: 40rem) {
-  .shot-list {
-    grid-template-columns: repeat(2, minmax(0, 18rem));
-  }
-
   .hero-layout {
     flex-direction: row;
     align-items: flex-start;
