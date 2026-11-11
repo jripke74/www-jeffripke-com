@@ -1,55 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 20 520 390" fill="none" stroke="#1a1714" stroke-linecap="round" stroke-linejoin="round">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 16 530 400" fill="none" stroke="#1a1714" stroke-linecap="round" stroke-linejoin="round">
   <title>Sailing ship</title>
-  <g stroke-width="2.4">
-    <path d="M198 58h74l2 52h-78z"/>
-    <path d="M235 62v44"/>
-    <path d="M180 124h110l3 58h-116z"/>
-    <path d="M235 128v50"/>
-    <path d="M162 196h146l4 70h-154z"/>
-    <path d="M235 200v62"/>
-    <path d="M300 118h66l2 46h-70z"/>
-    <path d="M333 122v38"/>
-    <path d="M284 178h100l4 74h-108z"/>
-    <path d="M333 182v66"/>
-    <path d="M94 176h62l2 40H92z"/>
-    <path d="M125 180v32"/>
-    <path d="M82 230h86l3 48H78z"/>
-    <path d="M125 234v40"/>
-    <path d="M338 112L492 230"/>
-    <path d="M125 174L232 56"/>
-    <path d="M238 52L330 110"/>
-    <path d="M162 200L150 292"/>
-    <path d="M308 200L320 290"/>
-    <path d="M284 182L274 288"/>
-    <path d="M384 182L396 286"/>
-    <path d="M492 232L452 300"/>
-    <path d="M410 132l70 92-34 16z"/>
-    <path d="M412 170l46 68-26 14z"/>
+  <g stroke-width="2.6">
+    <path d="M194 64 L268 52 L272 108 L188 116 Z"/>
+    <path d="M228 66 L236 110"/>
+    <path d="M176 126 L286 118 L292 180 L170 188 Z"/>
+    <path d="M230 130 L238 178"/>
+    <path d="M158 198 L308 188 L316 264 L150 274 Z"/>
+    <path d="M232 202 L240 262"/>
+    <path d="M296 122 L364 114 L368 164 L292 172 Z"/>
+    <path d="M328 120 L334 166"/>
+    <path d="M280 180 L384 172 L392 252 L272 260 Z"/>
+    <path d="M330 184 L338 250"/>
+    <path d="M90 178 L154 170 L158 214 L86 222 Z"/>
+    <path d="M120 176 L126 216"/>
+    <path d="M78 230 L168 222 L174 274 L70 282 Z"/>
+    <path d="M122 232 L128 274"/>
+    <path d="M334 116 L488 228"/>
+    <path d="M118 176 L226 58"/>
+    <path d="M236 54 L326 112"/>
+    <path d="M158 204 L146 292"/>
+    <path d="M310 196 L324 288"/>
+    <path d="M278 186 L266 286"/>
+    <path d="M386 180 L400 284"/>
+    <path d="M490 232 L446 304"/>
+    <path d="M404 136 L478 224 L440 242 Z"/>
+    <path d="M408 174 L458 242 L428 258 Z"/>
   </g>
-  <g stroke-width="3.3">
-    <path d="M64 278 L64 330 C96 354 180 366 280 364 C370 362 424 342 446 314 L460 286 L428 274 C330 266 170 270 64 278"/>
-    <path d="M80 286 C180 278 320 274 424 278"/>
-    <path d="M125 172 V286"/>
-    <path d="M235 46 V286"/>
-    <path d="M333 108 V286"/>
-    <path d="M188 58 h94"/>
-    <path d="M170 124 h130"/>
-    <path d="M150 196 h170"/>
-    <path d="M292 118 h82"/>
-    <path d="M274 178 h120"/>
-    <path d="M84 176 h82"/>
-    <path d="M70 230 h110"/>
-    <ellipse cx="235" cy="118" rx="15" ry="6"/>
-    <path d="M221 118 h28 M226 112 v8 M244 112 v8"/>
-    <path d="M235 46 V32"/>
-    <path d="M235 32 h17 l-6 6 6 6 h-17"/>
-    <path d="M446 280 L508 214"/>
-    <circle cx="150" cy="318" r="4.5"/>
-    <circle cx="190" cy="322" r="4.5"/>
-    <circle cx="230" cy="324" r="4.5"/>
-    <circle cx="270" cy="324" r="4.5"/>
-    <circle cx="310" cy="320" r="4.5"/>
-    <circle cx="348" cy="312" r="4.3"/>
-    <circle cx="384" cy="304" r="4"/>
+  <g stroke-width="3.4">
+    <path d="M16 308 L74 292 C170 280 290 274 400 282 L472 296 L450 316 C360 352 220 364 150 346 L16 308"/>
+    <path d="M48 308 C150 296 300 292 420 300"/>
+    <path d="M118 174 L126 294"/>
+    <path d="M230 50 L242 292"/>
+    <path d="M328 112 L336 288"/>
+    <path d="M186 60 L278 50"/>
+    <path d="M168 124 L292 114"/>
+    <path d="M148 196 L316 186"/>
+    <path d="M288 118 L372 110"/>
+    <path d="M270 178 L394 168"/>
+    <path d="M80 176 L162 168"/>
+    <path d="M66 228 L176 218"/>
+    <path d="M214 122 C220 112 248 112 256 124 C250 134 220 134 214 122"/>
+    <path d="M218 118 L252 116"/>
+    <path d="M232 48 L228 30"/>
+    <path d="M228 30 L248 24 L238 34 L250 40 L230 36"/>
+    <path d="M458 304 L512 220"/>
+    <circle cx="146" cy="326" r="5"/>
+    <circle cx="190" cy="332" r="4"/>
+    <circle cx="232" cy="334" r="5.4"/>
+    <circle cx="274" cy="332" r="4.2"/>
+    <circle cx="316" cy="326" r="5"/>
+    <circle cx="354" cy="318" r="4"/>
+    <circle cx="388" cy="310" r="4.6"/>
   </g>
 </svg>
