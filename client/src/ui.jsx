@@ -7,11 +7,17 @@ export function useDocumentTitle(title) {
   }, [title]);
 }
 
+let passedInitialLoad = false;
+
 export function useFocusHeading(ready) {
   const location = useLocation();
 
   useEffect(() => {
-    if (!ready || location.key === "default") {
+    if (!ready) {
+      return;
+    }
+    if (!passedInitialLoad) {
+      passedInitialLoad = true;
       return;
     }
     const heading = document.querySelector("#main h1");
@@ -20,7 +26,7 @@ export function useFocusHeading(ready) {
     }
     heading.tabIndex = -1;
     heading.focus();
-  }, [ready, location.pathname, location.key]);
+  }, [ready, location.pathname]);
 }
 
 export function useFetch(path) {

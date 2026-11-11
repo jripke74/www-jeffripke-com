@@ -86,6 +86,10 @@ a:hover {
   outline-offset: 3px;
 }
 
+#main h1:focus {
+  outline: none;
+}
+
 .skip-link {
   position: absolute;
   left: 0.75rem;
