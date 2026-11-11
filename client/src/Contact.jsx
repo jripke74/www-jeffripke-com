@@ -4,6 +4,7 @@ import { useDocumentTitle, useFocusHeading } from "./ui.jsx";
 const TOPICS = [
   { value: "general", label: "General" },
   { value: "media", label: "Ripke Media" },
+  { value: "map-your-travels", label: "Map Your Travels iOS App" },
   { value: "other", label: "Something else" },
 ];
 
