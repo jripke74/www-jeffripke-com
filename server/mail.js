@@ -2,7 +2,7 @@ const nodemailer = require("nodemailer");
 
 const TOPIC_LABELS = {
   general: "General",
-  media: "Ripke Media",
+  media: "Ripke Media App",
   "map-your-travels": "Map Your Travels iOS App",
   other: "Something else",
 };
