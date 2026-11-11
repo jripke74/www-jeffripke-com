@@ -1,4 +1,4 @@
-const SEED_VERSION = 8;
+const SEED_VERSION = 9;
 
 const profile = {
   id: 1,
@@ -159,15 +159,9 @@ const interests = [
   },
   {
     id: 2,
-    title: "Maps and travel",
-    detail: "Planning routes and keeping track of drives.",
-    sortOrder: 2,
-  },
-  {
-    id: 3,
     title: "Hiking, photography, and coins",
     detail: "Time outside, pictures from those trips, and a coin collection.",
-    sortOrder: 3,
+    sortOrder: 2,
   },
 ];
 
