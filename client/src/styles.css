@@ -276,8 +276,6 @@ a:hover {
 .portrait {
   width: 100%;
   height: auto;
-  border-radius: 0.35rem;
-  border: 1px solid var(--line);
   object-fit: cover;
 }
 
