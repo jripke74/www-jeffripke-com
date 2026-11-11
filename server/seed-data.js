@@ -1,4 +1,4 @@
-const SEED_VERSION = 9;
+const SEED_VERSION = 10;
 
 const profile = {
   id: 1,
@@ -6,7 +6,7 @@ const profile = {
   location: "Coeur d'Alene, Idaho",
   headline: "Full-stack web developer.",
   summary:
-    "I build web applications and iOS apps. This site is the record of that software work. Ripke Media, my media center, lives at ripkemedia.com.",
+    "I build web applications, iOS apps, and Apple TV apps. This site is the record of that software work. Ripke Media, my media center, lives at ripkemedia.com.",
   linkedinUrl: "https://www.linkedin.com/in/jeffripke/",
   githubUrl: "https://github.com/jripke74",
   mediaUrl: "https://www.ripkemedia.com",
