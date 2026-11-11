@@ -1,49 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-6 -72 560 262" fill="none" stroke="#1a1714" stroke-linecap="round" stroke-linejoin="round">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 20 520 390" fill="none" stroke="#1a1714" stroke-linecap="round" stroke-linejoin="round">
   <title>Sailing ship</title>
-  <g stroke-width="2.15">
-    <path d="M156 -42C118 8 70 70 28 124"/>
-    <path d="M168 -18C210 -14 236 -4 268 6"/>
-    <path d="M272 8C350 28 450 58 534 82"/>
-    <path d="M534 84C524 94 514 100 504 104"/>
-    <path d="M148 4C110 40 72 82 46 120"/>
-    <path d="M166 10C188 48 196 86 188 124"/>
-    <path d="M262 18C230 52 214 88 220 124"/>
-    <path d="M276 18C304 52 322 88 312 122"/>
-    <path d="M60 116C74 122 84 126 94 128"/>
-    <path d="M338 108C322 116 308 122 298 126"/>
-    <path d="M78 128C150 136 260 134 360 124"/>
-    <path d="M96 150C170 158 260 156 340 146"/>
-    <g stroke-width="2.3">
-      <circle cx="124" cy="146" r="5.2"/>
-      <path d="M124 146h11"/>
-      <circle cx="176" cy="150" r="5.2"/>
-      <path d="M176 150h11"/>
-      <circle cx="228" cy="150" r="5.2"/>
-      <path d="M228 150h11"/>
-      <circle cx="280" cy="146" r="5"/>
-      <path d="M280 146h11"/>
-      <circle cx="328" cy="142" r="4.8"/>
-      <path d="M328 142h10"/>
-    </g>
+  <g stroke-width="2.4">
+    <path d="M198 58h74l2 52h-78z"/>
+    <path d="M235 62v44"/>
+    <path d="M180 124h110l3 58h-116z"/>
+    <path d="M235 128v50"/>
+    <path d="M162 196h146l4 70h-154z"/>
+    <path d="M235 200v62"/>
+    <path d="M300 118h66l2 46h-70z"/>
+    <path d="M333 122v38"/>
+    <path d="M284 178h100l4 74h-108z"/>
+    <path d="M333 182v66"/>
+    <path d="M94 176h62l2 40H92z"/>
+    <path d="M125 180v32"/>
+    <path d="M82 230h86l3 48H78z"/>
+    <path d="M125 234v40"/>
+    <path d="M338 112L492 230"/>
+    <path d="M125 174L232 56"/>
+    <path d="M238 52L330 110"/>
+    <path d="M162 200L150 292"/>
+    <path d="M308 200L320 290"/>
+    <path d="M284 182L274 288"/>
+    <path d="M384 182L396 286"/>
+    <path d="M492 232L452 300"/>
+    <path d="M410 132l70 92-34 16z"/>
+    <path d="M412 170l46 68-26 14z"/>
   </g>
-  <g stroke-width="3.2">
-    <path d="M16 132C62 112 130 116 220 120C320 124 410 114 468 106L522 94L476 112C408 134 318 168 208 172C112 174 48 158 16 132"/>
-    <path d="M156 -50C158 -4 157 62 160 126"/>
-    <ellipse cx="158" cy="-26" rx="16" ry="6.5"/>
-    <path d="M143 -26h30M149 -32v8M167 -32v8"/>
-    <path d="M152 -48C170 -66 190 -54 206 -64C188 -50 170 -60 156 -42"/>
-    <path d="M118 -4C90 20 74 52 80 96"/>
-    <path d="M158 -4C100 -24 62 -34 40 -30"/>
-    <path d="M40 -30C34 22 40 70 58 116"/>
-    <path d="M58 116C90 126 130 122 158 122"/>
-    <path d="M266 2C268 42 267 86 270 124"/>
-    <path d="M230 8C206 30 192 60 198 94"/>
-    <path d="M270 10C230 -10 198 -18 182 -14"/>
-    <path d="M182 -14C172 34 174 74 190 114"/>
-    <path d="M190 114C224 122 252 118 270 116"/>
-    <path d="M522 94C530 88 536 84 544 78"/>
-    <path d="M282 12C370 42 460 66 530 82"/>
-    <path d="M530 82C470 96 400 108 338 108"/>
-    <path d="M338 108C308 70 292 38 282 14"/>
+  <g stroke-width="3.3">
+    <path d="M64 278 L64 330 C96 354 180 366 280 364 C370 362 424 342 446 314 L460 286 L428 274 C330 266 170 270 64 278"/>
+    <path d="M80 286 C180 278 320 274 424 278"/>
+    <path d="M125 172 V286"/>
+    <path d="M235 46 V286"/>
+    <path d="M333 108 V286"/>
+    <path d="M188 58 h94"/>
+    <path d="M170 124 h130"/>
+    <path d="M150 196 h170"/>
+    <path d="M292 118 h82"/>
+    <path d="M274 178 h120"/>
+    <path d="M84 176 h82"/>
+    <path d="M70 230 h110"/>
+    <ellipse cx="235" cy="118" rx="15" ry="6"/>
+    <path d="M221 118 h28 M226 112 v8 M244 112 v8"/>
+    <path d="M235 46 V32"/>
+    <path d="M235 32 h17 l-6 6 6 6 h-17"/>
+    <path d="M446 280 L508 214"/>
+    <circle cx="150" cy="318" r="4.5"/>
+    <circle cx="190" cy="322" r="4.5"/>
+    <circle cx="230" cy="324" r="4.5"/>
+    <circle cx="270" cy="324" r="4.5"/>
+    <circle cx="310" cy="320" r="4.5"/>
+    <circle cx="348" cy="312" r="4.3"/>
+    <circle cx="384" cy="304" r="4"/>
   </g>
 </svg>
