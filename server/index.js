@@ -22,6 +22,9 @@ app.use(
         defaultSrc: ["'self'"],
         scriptSrc: ["'self'"],
         styleSrc: ["'self'"],
+        // Safari 27 reports a false style-src violation when a page creates
+        // elements, unless style attributes are explicitly allowed.
+        styleSrcAttr: ["'unsafe-inline'"],
         imgSrc: ["'self'", "data:"],
         connectSrc: ["'self'"],
         formAction: ["'self'"],
