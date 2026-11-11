@@ -70,7 +70,7 @@ p {
 
 a {
   color: var(--accent-dark);
-  text-underline-offset: 0.15em;
+  text-decoration: none;
 }
 
 a:hover {
@@ -199,7 +199,6 @@ a:hover {
   min-height: 2.75rem;
   padding: 0.35rem 0;
   font-weight: 600;
-  text-decoration-thickness: 2px;
 }
 
 .site-nav a[aria-current="page"] {
@@ -395,10 +394,6 @@ a:hover {
   display: block;
 }
 
-.card a.stretch:hover h3 {
-  text-decoration: underline;
-}
-
 .meta {
   margin: 0;
   color: var(--muted);
@@ -486,12 +481,6 @@ a:hover {
 
 .work-link:focus-visible {
   outline: none;
-}
-
-.work-row:hover .work-link,
-.work-row:focus-within .work-link {
-  text-decoration: underline;
-  text-underline-offset: 0.14em;
 }
 
 .work-shot img {
