@@ -1,6 +1,40 @@
 import { Link } from "react-router-dom";
 import { LoadError, Loading, useDocumentTitle, useFetch, useFocusHeading } from "./ui.jsx";
 
+export function ProjectIndex({ projects, titleLevel = "h2" }) {
+  const Title = titleLevel;
+  return (
+    <ul className="work-list">
+      {projects.map((project) => (
+        <li key={project.slug}>
+          <article className={project.coverPhone ? "work-row work-row-phone" : "work-row"}>
+            <div className="work-copy">
+              <p className="work-status">{project.status}</p>
+              <Title>
+                <Link className="work-link" to={`/projects/${project.slug}`}>
+                  {project.title}
+                  <span className="visually-hidden">. View project</span>
+                </Link>
+              </Title>
+              <p>{project.summary}</p>
+              <ul className="stack-list" aria-label={`${project.title} technologies`}>
+                {project.stack.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            {project.cover ? (
+              <div className={project.coverPhone ? "work-shot work-shot-phone" : "work-shot"}>
+                <img src={project.cover} alt="" />
+              </div>
+            ) : null}
+          </article>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 export default function Projects() {
   useDocumentTitle("Projects | Jeff Ripke");
   const state = useFetch("/api/projects");
@@ -20,34 +54,7 @@ export default function Projects() {
         <h1>Projects</h1>
         <p className="lede prose">Software I am building.</p>
       </header>
-      <ul className="work-list">
-        {state.data.projects.map((project) => (
-          <li key={project.slug}>
-            <article className={project.coverPhone ? "work-row work-row-phone" : "work-row"}>
-              <div className="work-copy">
-                <p className="work-status">{project.status}</p>
-                <h2>
-                  <Link className="work-link" to={`/projects/${project.slug}`}>
-                    {project.title}
-                    <span className="visually-hidden">. View project</span>
-                  </Link>
-                </h2>
-                <p>{project.summary}</p>
-                <ul className="stack-list" aria-label={`${project.title} technologies`}>
-                  {project.stack.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-              {project.cover ? (
-                <div className={project.coverPhone ? "work-shot work-shot-phone" : "work-shot"}>
-                  <img src={project.cover} alt="" />
-                </div>
-              ) : null}
-            </article>
-          </li>
-        ))}
-      </ul>
+      <ProjectIndex projects={state.data.projects} />
     </>
   );
 }

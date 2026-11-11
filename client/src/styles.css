@@ -398,7 +398,8 @@ a:hover {
   color: var(--accent-dark);
 }
 
-.work-copy h2 {
+.work-copy h2,
+.work-copy h3 {
   margin: 0 0 0.4rem;
   font-size: 1.7rem;
 }

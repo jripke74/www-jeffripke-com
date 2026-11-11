@@ -1,19 +1,25 @@
 import { Link } from "react-router-dom";
+import { ProjectIndex } from "./Projects.jsx";
 import { ExternalLink, LoadError, Loading, useDocumentTitle, useFetch, useFocusHeading } from "./ui.jsx";
 
 export default function Home() {
   useDocumentTitle("Jeff Ripke");
-  const state = useFetch("/api/profile");
-  useFocusHeading(state.status !== "loading");
+  const profileState = useFetch("/api/profile");
+  const projectState = useFetch("/api/projects");
+  const loading = profileState.status === "loading" || projectState.status === "loading";
+  useFocusHeading(!loading);
 
-  if (state.status === "loading") {
+  if (loading) {
     return <Loading label="Loading introduction." />;
   }
-  if (state.status === "error") {
-    return <LoadError message={state.error} />;
+  if (profileState.status === "error") {
+    return <LoadError message={profileState.error} />;
+  }
+  if (projectState.status === "error") {
+    return <LoadError message={projectState.error} />;
   }
 
-  const { profile, interests, credentials } = state.data;
+  const { profile, credentials } = profileState.data;
 
   return (
     <>
@@ -57,16 +63,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section" aria-labelledby="interests-heading">
-        <h2 id="interests-heading">Other interests</h2>
-        <div className="card-list two">
-          {interests.map((item) => (
-            <article className="card" key={item.title}>
-              <h3>{item.title}</h3>
-              <p>{item.detail}</p>
-            </article>
-          ))}
-        </div>
+      <section className="section" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Projects</h2>
+        <ProjectIndex projects={projectState.data.projects} titleLevel="h3" />
       </section>
     </>
   );
