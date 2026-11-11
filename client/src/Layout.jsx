@@ -57,7 +57,7 @@ export default function Layout({ children }) {
         <div className="header-inner">
           <div className="header-bar">
             <a className="brand" href="/">
-              <img className="brand-mark" src="/logo.svg" alt="" width="39" height="41" />
+              <img className="brand-mark" src="/logo.svg" alt="" width="46" height="40" />
               Jeff Ripke
             </a>
             <button
