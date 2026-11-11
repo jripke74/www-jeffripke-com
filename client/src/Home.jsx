@@ -27,8 +27,8 @@ export default function Home() {
           <img
             className="portrait"
             src="/jeff-ripke.jpg"
-            width="512"
-            height="551"
+            width="509"
+            height="640"
             alt="Portrait of Jeff Ripke"
           />
           <div className="hero-intro-copy">
