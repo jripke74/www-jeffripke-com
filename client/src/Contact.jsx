@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { useDocumentTitle, useFocusHeading } from "./ui.jsx";
 
 const TOPICS = [
@@ -11,6 +12,11 @@ const TOPICS = [
 export default function Contact() {
   useDocumentTitle("Contact | Jeff Ripke");
   useFocusHeading(true);
+  const [params] = useSearchParams();
+  const requested = params.get("topic") || "";
+  const [topic, setTopic] = useState(
+    TOPICS.some((item) => item.value === requested) ? requested : "general"
+  );
   const [status, setStatus] = useState("idle");
   const [error, setError] = useState("");
   const [field, setField] = useState("");
@@ -97,7 +103,12 @@ export default function Contact() {
 
         <div className="field">
           <label htmlFor="topic">Topic</label>
-          <select id="topic" name="topic" defaultValue="general">
+          <select
+            id="topic"
+            name="topic"
+            value={topic}
+            onChange={(event) => setTopic(event.target.value)}
+          >
             {TOPICS.map((topic) => (
               <option key={topic.value} value={topic.value}>
                 {topic.label}
