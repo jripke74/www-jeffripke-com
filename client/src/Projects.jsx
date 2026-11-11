@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import pageMeta from "./page-meta.json";
 import { LoadError, Loading, useDocumentTitle, useFetch, useFocusHeading } from "./ui.jsx";
 
 export function ProjectIndex({ projects, titleLevel = "h2" }) {
@@ -36,7 +37,7 @@ export function ProjectIndex({ projects, titleLevel = "h2" }) {
 }
 
 export default function Projects() {
-  useDocumentTitle("Projects | Jeff Ripke");
+  useDocumentTitle(pageMeta["/projects"].title, pageMeta["/projects"].description);
   const state = useFetch("/api/projects");
   useFocusHeading(state.status !== "loading");
 

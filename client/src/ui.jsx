@@ -1,10 +1,28 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
-export function useDocumentTitle(title) {
+export function useDocumentTitle(title, description) {
   useEffect(() => {
     document.title = title;
-  }, [title]);
+    setMeta("description", description);
+    setMeta("robots", title.startsWith("Page not found") ? "noindex" : "");
+  }, [title, description]);
+}
+
+function setMeta(name, content) {
+  const current = document.querySelector(`meta[name="${name}"]`);
+  if (!content) {
+    current?.remove();
+    return;
+  }
+  if (current) {
+    current.setAttribute("content", content);
+    return;
+  }
+  const created = document.createElement("meta");
+  created.name = name;
+  created.content = content;
+  document.head.appendChild(created);
 }
 
 let passedInitialLoad = false;

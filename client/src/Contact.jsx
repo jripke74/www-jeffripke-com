@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import pageMeta from "./page-meta.json";
 import { useDocumentTitle, useFocusHeading } from "./ui.jsx";
 
 const TOPICS = [
@@ -10,7 +11,7 @@ const TOPICS = [
 ];
 
 export default function Contact() {
-  useDocumentTitle("Contact | Jeff Ripke");
+  useDocumentTitle(pageMeta["/contact"].title, pageMeta["/contact"].description);
   useFocusHeading(true);
   const [params] = useSearchParams();
   const requested = params.get("topic") || "";

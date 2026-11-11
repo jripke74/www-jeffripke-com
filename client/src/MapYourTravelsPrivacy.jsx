@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
+import pageMeta from "./page-meta.json";
 import { useDocumentTitle, useFocusHeading } from "./ui.jsx";
 
 export default function MapYourTravelsPrivacy() {
-  useDocumentTitle("Map Your Travels Privacy Policy | Jeff Ripke");
+  useDocumentTitle(
+    pageMeta["/map-your-travels/privacy"].title,
+    pageMeta["/map-your-travels/privacy"].description
+  );
   useFocusHeading(true);
 
   return (

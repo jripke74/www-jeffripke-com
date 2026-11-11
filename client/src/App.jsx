@@ -23,7 +23,7 @@ export default function App() {
 }
 
 function Missing() {
-  useDocumentTitle("Page not found | Jeff Ripke");
+  useDocumentTitle("Page not found | Jeff Ripke", "That address is not part of this site.");
   useFocusHeading(true);
   return (
     <>

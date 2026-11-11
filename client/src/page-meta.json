@@ -1,0 +1,18 @@
+{
+  "/": {
+    "title": "Jeff Ripke | Full-stack web developer",
+    "description": "Jeff Ripke builds web applications, iOS apps, and Apple TV apps in Coeur d'Alene, Idaho."
+  },
+  "/projects": {
+    "title": "Projects | Jeff Ripke",
+    "description": "Software Jeff Ripke is building, including Ripke Media and Map Your Travels."
+  },
+  "/contact": {
+    "title": "Contact | Jeff Ripke",
+    "description": "Send a note to Jeff Ripke about a project or Ripke Media."
+  },
+  "/map-your-travels/privacy": {
+    "title": "Map Your Travels privacy policy | Jeff Ripke",
+    "description": "Map Your Travels keeps the route on the phone. Jeff Ripke does not receive your trips."
+  }
+}

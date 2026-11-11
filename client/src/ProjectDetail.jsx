@@ -4,8 +4,10 @@ import { ExternalLink, LoadError, Loading, useDocumentTitle, useFetch, useFocusH
 export default function ProjectDetail() {
   const { slug } = useParams();
   const state = useFetch(`/api/projects/${slug}`);
-  const title = state.status === "ready" ? state.data.project.title : "Project";
-  useDocumentTitle(`${title} | Jeff Ripke`);
+  const title = state.status === "ready" ? `${state.data.project.title} | Jeff Ripke` : "Project | Jeff Ripke";
+  const description =
+    state.status === "ready" ? state.data.project.summary : "A software project by Jeff Ripke.";
+  useDocumentTitle(title, description);
   useFocusHeading(state.status !== "loading");
 
   if (state.status === "loading") {

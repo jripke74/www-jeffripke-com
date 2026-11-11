@@ -1,8 +1,9 @@
 import { ProjectIndex } from "./Projects.jsx";
+import pageMeta from "./page-meta.json";
 import { ExternalLink, LoadError, Loading, useDocumentTitle, useFetch, useFocusHeading } from "./ui.jsx";
 
 export default function Home() {
-  useDocumentTitle("Jeff Ripke");
+  useDocumentTitle(pageMeta["/"].title, pageMeta["/"].description);
   const profileState = useFetch("/api/profile");
   const projectState = useFetch("/api/projects");
   const loading = profileState.status === "loading" || projectState.status === "loading";

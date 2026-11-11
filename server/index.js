@@ -1,5 +1,6 @@
 require("dotenv").config();
 
+const fs = require("fs");
 const path = require("path");
 const express = require("express");
 const helmet = require("helmet");
@@ -7,6 +8,7 @@ const rateLimit = require("express-rate-limit");
 const { createPool } = require("./db");
 const { ensureSeed, mapProfile, mapProject } = require("./seed");
 const { sendContactNote } = require("./mail");
+const { describePage, jsonLdScriptSrc, notFoundPage, renderDocument, renderSitemap } = require("./seo");
 
 const app = express();
 const pool = createPool();
@@ -20,7 +22,7 @@ app.use(
     contentSecurityPolicy: {
       directives: {
         defaultSrc: ["'self'"],
-        scriptSrc: ["'self'"],
+        scriptSrc: ["'self'", jsonLdScriptSrc],
         styleSrc: ["'self'"],
         // Safari 27 reports a false style-src violation when a page creates
         // elements, unless style attributes are explicitly allowed.
@@ -169,9 +171,18 @@ app.post("/api/contact", contactLimiter, async (req, res, next) => {
   }
 });
 
-app.use(express.static(clientDir));
+app.get("/sitemap.xml", async (req, res, next) => {
+  try {
+    const xml = await renderSitemap(pool);
+    res.type("application/xml").send(xml);
+  } catch (error) {
+    next(error);
+  }
+});
 
-app.use((req, res, next) => {
+app.use(express.static(clientDir, { index: false }));
+
+app.use(async (req, res, next) => {
   if (req.method !== "GET" && req.method !== "HEAD") {
     next();
     return;
@@ -180,11 +191,13 @@ app.use((req, res, next) => {
     next();
     return;
   }
-  res.sendFile(path.join(clientDir, "index.html"), (error) => {
-    if (error) {
-      next();
-    }
-  });
+  try {
+    const html = await fs.promises.readFile(path.join(clientDir, "index.html"), "utf8");
+    const page = (await describePage(pool, req.path)) || notFoundPage(req.path);
+    res.status(page.noindex ? 404 : 200).type("html").send(renderDocument(html, page));
+  } catch (error) {
+    next(error);
+  }
 });
 
 app.use((req, res) => {
