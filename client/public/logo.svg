@@ -1,9 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 540" fill="none" stroke="#1a1714" stroke-linecap="round" stroke-linejoin="round">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="64 10 430 452" fill="none" stroke="#1a1714" stroke-linecap="round" stroke-linejoin="round">
   <title>Sailing ship</title>
-  <g stroke-width="2.4">
-    <path d="M40 488c34-12 54 12 88 0s54 12 88 0 54 12 88 0 52 10 84-2"/>
-    <path d="M52 508c32-10 50 10 82 0s50 10 82 0 50 10 82 0 48 8 76-2"/>
-  </g>
 
   <g stroke-width="3.5">
     <path d="M78 312V258h48l4 54"/>
