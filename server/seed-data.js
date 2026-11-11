@@ -1,4 +1,4 @@
-const SEED_VERSION = 10;
+const SEED_VERSION = 11;
 
 const profile = {
   id: 1,
@@ -53,7 +53,7 @@ const projects = [
       "The public site is www.ripkemedia.com. Library files stay on my home storage. This portfolio only points to that work.",
     ].join("\n\n"),
     status: "In progress",
-    stack: ["Node.js", "Express", "PostgreSQL", "Heroku"],
+    stack: ["Node.js", "Express", "PostgreSQL", "Heroku", "JavaScript", "CSS", "HTML"],
     linkUrl: "https://www.ripkemedia.com",
     linkLabel: "Open Ripke Media",
     images: [
@@ -142,7 +142,7 @@ const projects = [
       "An earlier version of this repository was a single Express page with a short reading project and a media form. This version replaces that page with the portfolio.",
     ].join("\n\n"),
     status: "Current",
-    stack: ["React", "Node.js", "Express", "PostgreSQL", "Heroku"],
+    stack: ["React", "Node.js", "Express", "PostgreSQL", "Heroku", "JavaScript", "CSS", "HTML"],
     linkUrl: null,
     linkLabel: null,
     images: [],
