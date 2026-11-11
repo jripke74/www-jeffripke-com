@@ -273,9 +273,12 @@ a:hover {
 }
 
 .portrait {
+  display: block;
   width: 100%;
   height: auto;
   object-fit: cover;
+  border-radius: 0.7rem;
+  box-shadow: 0 0.4rem 1.15rem rgba(26, 23, 20, 0.14);
 }
 
 .eyebrow {
