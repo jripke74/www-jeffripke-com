@@ -1,4 +1,10 @@
+const fs = require("fs");
 const { Pool } = require("pg");
+
+const CA_BUNDLES = [
+  "/usr/lib/ssl/certs/ca-certificates.crt",
+  "/etc/ssl/certs/ca-certificates.crt",
+];
 
 function createPool() {
   const connectionString = process.env.DATABASE_URL;
@@ -10,9 +16,25 @@ function createPool() {
   const sslOff = process.env.DATABASE_SSL === "false" || local;
 
   return new Pool({
-    connectionString,
-    ssl: sslOff ? false : { rejectUnauthorized: false },
+    connectionString: sslOff ? connectionString : connectionStringWithoutSslMode(connectionString),
+    ssl: sslOff ? false : { rejectUnauthorized: true, ca: readServerCa() },
   });
+}
+
+function connectionStringWithoutSslMode(connectionString) {
+  const url = new URL(connectionString);
+  for (const key of ["sslmode", "ssl", "sslrootcert", "sslcert", "sslkey"]) {
+    url.searchParams.delete(key);
+  }
+  return url.toString();
+}
+
+function readServerCa() {
+  const bundle = CA_BUNDLES.find((candidate) => fs.existsSync(candidate));
+  if (!bundle) {
+    throw new Error("The database CA bundle is missing, so the server certificate cannot be checked.");
+  }
+  return fs.readFileSync(bundle);
 }
 
 module.exports = { createPool };
