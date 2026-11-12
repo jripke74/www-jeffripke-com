@@ -57,8 +57,7 @@ export default function Contact() {
         <p className="eyebrow">Coeur d&apos;Alene, Idaho</p>
         <h1>Contact</h1>
         <p className="lede prose">
-          Send a note about a project or Ripke Media. It is emailed to me
-          and saved here.
+          Send a note about a project.
         </p>
       </header>
 
