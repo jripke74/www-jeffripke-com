@@ -1,4 +1,4 @@
-const SEED_VERSION = 13;
+const SEED_VERSION = 14;
 
 const profile = {
   id: 1,
@@ -138,7 +138,7 @@ const projects = [
       "This portfolio. React on the front, Node.js and PostgreSQL behind it, hosted on Heroku.",
     body: [
       "www.jeffripke.com and www.ripkeenterprises.com both serve this site. The pages are a React application. Express reads the projects from PostgreSQL and accepts notes through the contact form.",
-      "The layout starts from a phone screen. On a small screen the sections sit in a hamburger menu. On a wider screen the same links stay in the header. Text, contrast, focus, labels, and keyboard use follow the Web Content Accessibility Guidelines.",
+      "The site is mobile-first. The layout starts from a phone screen, with the sections in a hamburger menu. On a wider screen the same links stay in the header. Text, contrast, focus, labels, and keyboard use follow the Web Content Accessibility Guidelines.",
       "An earlier version of this repository was a single Express page with a short reading project and a media form. This version replaces that page with the portfolio.",
     ].join("\n\n"),
     status: "Current",
