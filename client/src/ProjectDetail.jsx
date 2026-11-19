@@ -27,6 +27,10 @@ export default function ProjectDetail() {
 
   const project = state.data.project;
   const paragraphs = project.body.split("\n\n");
+  const privacyPath = {
+    "map-your-travels": "/map-your-travels/privacy",
+    "camp-ducks": "/camp-ducks/privacy",
+  }[project.slug];
 
   return (
     <article>
@@ -55,9 +59,9 @@ export default function ProjectDetail() {
           <p key={paragraph}>{paragraph}</p>
         ))}
       </div>
-      {project.slug === "map-your-travels" ? (
+      {privacyPath ? (
         <p>
-          <Link to="/map-your-travels/privacy">Privacy policy</Link>
+          <Link to={privacyPath}>Privacy policy</Link>
         </p>
       ) : null}
       <div className="button-row">

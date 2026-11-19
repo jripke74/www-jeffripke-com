@@ -1,4 +1,4 @@
-const SEED_VERSION = 14;
+const SEED_VERSION = 15;
 
 const profile = {
   id: 1,
@@ -131,6 +131,30 @@ const projects = [
     sortOrder: 2,
   },
   {
+    id: 4,
+    slug: "camp-ducks",
+    title: "Camp Ducks",
+    summary: "An iOS sticker pack of rubber ducks and outdoor words for Messages.",
+    body: [
+      "Camp Ducks is a sticker pack I drew for Messages. Fifteen rubber ducks carry outdoor words such as Duck Ride, Tailgate, and Trail Ready.",
+      "The stickers send from a conversation in Messages. The app on the Home Screen is a gallery of the same pack.",
+    ].join("\n\n"),
+    status: "In progress",
+    stack: ["Swift", "SwiftUI", "iOS"],
+    linkUrl: null,
+    linkLabel: null,
+    images: [
+      {
+        src: "/camp-ducks-stickers.png",
+        alt: "Camp Ducks sticker sheet of fifteen rubber ducks with outdoor words.",
+        caption: "Sticker sheet",
+        width: 1186,
+        height: 834,
+      },
+    ],
+    sortOrder: 3,
+  },
+  {
     id: 3,
     slug: "this-website",
     title: "jeffripke.com",
@@ -146,7 +170,7 @@ const projects = [
     linkUrl: null,
     linkLabel: null,
     images: [],
-    sortOrder: 3,
+    sortOrder: 4,
   },
 ];
 

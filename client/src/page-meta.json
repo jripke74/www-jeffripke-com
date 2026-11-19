@@ -5,7 +5,7 @@
   },
   "/projects": {
     "title": "Projects | Jeff Ripke",
-    "description": "Software Jeff Ripke is building, including Ripke Media and Map Your Travels."
+    "description": "Software Jeff Ripke is building, including Ripke Media, Map Your Travels, and Camp Ducks."
   },
   "/contact": {
     "title": "Contact | Jeff Ripke",
@@ -14,5 +14,9 @@
   "/map-your-travels/privacy": {
     "title": "Map Your Travels privacy policy | Jeff Ripke",
     "description": "Map Your Travels keeps the route on the phone. Jeff Ripke does not receive your trips."
+  },
+  "/camp-ducks/privacy": {
+    "title": "Camp Ducks privacy policy | Jeff Ripke",
+    "description": "Camp Ducks does not collect personal information. Stickers stay on the phone."
   }
 }

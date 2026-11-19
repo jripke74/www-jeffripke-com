@@ -5,6 +5,7 @@ import Projects from "./Projects.jsx";
 import ProjectDetail from "./ProjectDetail.jsx";
 import Contact from "./Contact.jsx";
 import MapYourTravelsPrivacy from "./MapYourTravelsPrivacy.jsx";
+import CampDucksPrivacy from "./CampDucksPrivacy.jsx";
 import { useDocumentTitle, useFocusHeading } from "./ui.jsx";
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/:slug" element={<ProjectDetail />} />
         <Route path="/map-your-travels/privacy" element={<MapYourTravelsPrivacy />} />
+        <Route path="/camp-ducks/privacy" element={<CampDucksPrivacy />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<Missing />} />
       </Routes>

@@ -4,6 +4,7 @@ const TOPIC_LABELS = {
   general: "General",
   media: "Ripke Media App",
   "map-your-travels": "Map Your Travels iOS App",
+  "camp-ducks": "Camp Ducks iOS Stickers",
   other: "Something else",
 };
 
