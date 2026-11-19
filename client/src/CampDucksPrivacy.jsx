@@ -2,11 +2,17 @@ import { Link } from "react-router-dom";
 import pageMeta from "./page-meta.json";
 import { useDocumentTitle, useFocusHeading } from "./ui.jsx";
 
-export function CampDucksPrivacyBody({ heading = "h1", headingId }) {
-  const Heading = heading;
+export default function CampDucksPrivacy() {
+  useDocumentTitle(
+    pageMeta["/camp-ducks/privacy"].title,
+    pageMeta["/camp-ducks/privacy"].description
+  );
+  useFocusHeading(true);
+
   return (
-    <>
-      <Heading id={headingId}>Privacy policy</Heading>
+    <article className="prose">
+      <p className="eyebrow">Camp Ducks</p>
+      <h1>Privacy policy</h1>
       <p>Last updated November 19, 2026.</p>
       <p>
         Camp Ducks does not collect, store, or share personal information. The app
@@ -21,21 +27,6 @@ export function CampDucksPrivacyBody({ heading = "h1", headingId }) {
         Questions about this policy can be sent from the{" "}
         <Link to="/contact">contact page</Link>.
       </p>
-    </>
-  );
-}
-
-export default function CampDucksPrivacy() {
-  useDocumentTitle(
-    pageMeta["/camp-ducks/privacy"].title,
-    pageMeta["/camp-ducks/privacy"].description
-  );
-  useFocusHeading(true);
-
-  return (
-    <article className="prose">
-      <p className="eyebrow">Camp Ducks</p>
-      <CampDucksPrivacyBody />
     </article>
   );
 }
