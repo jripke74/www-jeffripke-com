@@ -1,4 +1,5 @@
 import { Link, useParams } from "react-router-dom";
+import { CampDucksPrivacyBody } from "./CampDucksPrivacy.jsx";
 import { ExternalLink, LoadError, Loading, useDocumentTitle, useFetch, useFocusHeading } from "./ui.jsx";
 
 export default function ProjectDetail() {
@@ -29,7 +30,6 @@ export default function ProjectDetail() {
   const paragraphs = project.body.split("\n\n");
   const privacyPath = {
     "map-your-travels": "/map-your-travels/privacy",
-    "camp-ducks": "/camp-ducks/privacy",
   }[project.slug];
 
   return (
@@ -59,6 +59,11 @@ export default function ProjectDetail() {
           <p key={paragraph}>{paragraph}</p>
         ))}
       </div>
+      {project.slug === "camp-ducks" ? (
+        <section className="prose" aria-labelledby="camp-ducks-privacy">
+          <CampDucksPrivacyBody heading="h2" headingId="camp-ducks-privacy" />
+        </section>
+      ) : null}
       {privacyPath ? (
         <p>
           <Link to={privacyPath}>Privacy policy</Link>
