@@ -5,7 +5,7 @@
   },
   "/projects": {
     "title": "Projects | Jeff Ripke",
-    "description": "Software Jeff Ripke is building, including Ripke Media, Map Your Travels, and Camp Ducks."
+    "description": "Software Jeff Ripke is building, including Ripke Media, Map Your Travels, Camp Ducks, and Stitch Club Stickers."
   },
   "/contact": {
     "title": "Contact | Jeff Ripke",
@@ -18,5 +18,9 @@
   "/camp-ducks/privacy": {
     "title": "Camp Ducks privacy policy | Jeff Ripke",
     "description": "Camp Ducks does not collect personal information. Stickers stay on the phone."
+  },
+  "/stitch-club-stickers/privacy": {
+    "title": "Stitch Club Stickers privacy policy | Jeff Ripke",
+    "description": "Stitch Club Stickers does not collect personal information. Stickers stay on the phone."
   }
 }

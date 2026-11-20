@@ -1,4 +1,4 @@
-const SEED_VERSION = 15;
+const SEED_VERSION = 16;
 
 const profile = {
   id: 1,
@@ -155,6 +155,30 @@ const projects = [
     sortOrder: 3,
   },
   {
+    id: 5,
+    slug: "stitch-club-stickers",
+    title: "Stitch Club Stickers",
+    summary: "An iOS sticker pack of embroidery hoops, floss, and sewing words for Messages.",
+    body: [
+      "Stitch Club Stickers is a sticker pack I made for Messages. Fifteen embroidery stickers carry sewing words such as Sew Happy, Floss Boss, and Knot Today.",
+      "The stickers send from a conversation in Messages. The app on the Home Screen is a gallery of the same pack.",
+    ].join("\n\n"),
+    status: "In progress",
+    stack: ["Swift", "SwiftUI", "iOS"],
+    linkUrl: null,
+    linkLabel: null,
+    images: [
+      {
+        src: "/stitch-club-stickers.png",
+        alt: "Stitch Club Stickers sheet of fifteen embroidery stickers with sewing words.",
+        caption: "Sticker sheet",
+        width: 1208,
+        height: 816,
+      },
+    ],
+    sortOrder: 4,
+  },
+  {
     id: 3,
     slug: "this-website",
     title: "jeffripke.com",
@@ -170,7 +194,7 @@ const projects = [
     linkUrl: null,
     linkLabel: null,
     images: [],
-    sortOrder: 4,
+    sortOrder: 5,
   },
 ];
 

@@ -30,6 +30,7 @@ export default function ProjectDetail() {
   const privacyPath = {
     "map-your-travels": "/map-your-travels/privacy",
     "camp-ducks": "/camp-ducks/privacy",
+    "stitch-club-stickers": "/stitch-club-stickers/privacy",
   }[project.slug];
 
   return (

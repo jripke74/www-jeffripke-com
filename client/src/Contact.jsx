@@ -8,6 +8,7 @@ const TOPICS = [
   { value: "media", label: "Ripke Media App" },
   { value: "map-your-travels", label: "Map Your Travels iOS App" },
   { value: "camp-ducks", label: "Camp Ducks iOS Stickers" },
+  { value: "stitch-club-stickers", label: "Stitch Club Stickers" },
   { value: "other", label: "Something else" },
 ];
 

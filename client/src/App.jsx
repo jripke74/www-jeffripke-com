@@ -6,6 +6,7 @@ import ProjectDetail from "./ProjectDetail.jsx";
 import Contact from "./Contact.jsx";
 import MapYourTravelsPrivacy from "./MapYourTravelsPrivacy.jsx";
 import CampDucksPrivacy from "./CampDucksPrivacy.jsx";
+import StitchClubPrivacy from "./StitchClubPrivacy.jsx";
 import { useDocumentTitle, useFocusHeading } from "./ui.jsx";
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/projects/:slug" element={<ProjectDetail />} />
         <Route path="/map-your-travels/privacy" element={<MapYourTravelsPrivacy />} />
         <Route path="/camp-ducks/privacy" element={<CampDucksPrivacy />} />
+        <Route path="/stitch-club-stickers/privacy" element={<StitchClubPrivacy />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<Missing />} />
       </Routes>

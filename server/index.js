@@ -124,7 +124,7 @@ app.get("/api/projects/:slug", async (req, res, next) => {
   }
 });
 
-const TOPICS = new Set(["general", "media", "map-your-travels", "camp-ducks", "other"]);
+const TOPICS = new Set(["general", "media", "map-your-travels", "camp-ducks", "stitch-club-stickers", "other"]);
 
 app.post("/api/contact", contactLimiter, async (req, res, next) => {
   try {
